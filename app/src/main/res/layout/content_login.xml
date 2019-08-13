@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="312dp"
+        android:background="@drawable/rectangle_rounded"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/txt_content"-->
+            <!--android:textColor="@color/colorTextWhite87" />-->
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            style="@style/Text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/txt_intro_login" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/CustomButton"
+            android:layout_marginBottom="10dp"
+            android:text="@string/txt_label_new"
+            app:layout_anchor="@id/buttonLogin"
+            app:layout_anchorGravity="top|center" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLogin"
+            style="@style/CustomButton"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/custom_button_no_bg"
+            android:text="@string/txt_getting_started"
+            android:textColor="@color/colorAccent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--<com.google.android.material.card.MaterialCardView-->
+        <!--android:id="@+id/bottomSheet"-->
+        <!--style="@style/Widget.Design.BottomSheet.Modal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:behavior_peekHeight="50dp"-->
+        <!--app:cardBackgroundColor="#eee"-->
+        <!--app:cardCornerRadius="0dp"-->
+        <!--app:cardElevation="8dp"-->
+        <!--app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">-->
+
+        <!--<include layout="@layout/activity_main" />-->
+
+    <!--</com.google.android.material.card.MaterialCardView>-->
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--android:id="@+id/anim"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--app:lottie_autoPlay="true"-->
+        <!--app:lottie_fileName="machine.json"-->
+        <!--app:lottie_loop="true"-->
+        <!--tools:layout_editor_absoluteX="8dp"-->
+        <!--tools:layout_editor_absoluteY="110dp" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
