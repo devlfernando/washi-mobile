@@ -39,9 +39,14 @@
     <style name="CustomButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:layout_width">370dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorTextWhite87</item>
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:background">@drawable/custom_button_bg</item>
+    </style>
+
+    <style name="CustomMaterialCardView" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:bottomRightRadius">6dp</item>
+        <item name="android:bottomLeftRadius">6dp</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

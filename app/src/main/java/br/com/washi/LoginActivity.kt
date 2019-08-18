@@ -1,21 +1,26 @@
 package br.com.washi
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
+import kotlinx.android.synthetic.main.content_login.*
 
-import kotlinx.android.synthetic.main.activity_login.*
-
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        buttonStart.setOnClickListener {
+            openBottomSheet()
+        }
 //        fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                    .setAction("Action", null).show()
 //        }
+    }
+
+    private fun openBottomSheet() {
+        val bottomSheetLoginFragment = BottomSheetLoginFragment()
+        bottomSheetLoginFragment.show(supportFragmentManager, bottomSheetLoginFragment.tag)
     }
 
 }

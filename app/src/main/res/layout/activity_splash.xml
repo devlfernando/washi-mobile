@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
     android:orientation="vertical"
+    android:background="#3060f2"
     android:gravity="center">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:src="@drawable/ic_launcher_background"/>
+        android:fontFamily="@font/washi_bold"
+        android:text="@string/txt_washi"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="100sp"
+        tools:text="Washi" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
