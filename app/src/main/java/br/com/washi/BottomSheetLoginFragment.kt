@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.full_content_main_bottomsheet.*
+import kotlinx.android.synthetic.main.full_content_login_bottomsheet.*
+import org.jetbrains.anko.support.v4.toast
 
 /**
 
@@ -15,12 +16,20 @@ import kotlinx.android.synthetic.main.full_content_main_bottomsheet.*
 
 class BottomSheetLoginFragment : BottomSheetDialogFragment() {
 
+    override fun getTheme(): Int {
+        return R.style.Theme_MaterialComponents_Light_BottomSheetDialog
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_bottom_sheet, container, false)
+        return inflater.inflate(R.layout.fragment_bottom_sheet_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        etEmailInput.requestFocus()
+        etPasswordInput.requestFocus()
+
+        fab.setOnClickListener { fabButton ->
+            toast("Olá, ${etPasswordInput.text}")
+        }
     }
 }

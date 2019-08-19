@@ -6,34 +6,39 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LoginActivity"
+    android:background="@drawable/background_login"
     tools:showIn="@layout/activity_login">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="150dp">
+    <!--<androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginBottom="190dp">-->
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@drawable/ic_logo_washi" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:text="Washi"-->
+    <!--android:fontFamily="@font/washi_bold"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="70sp"-->
+    <!--android:paddingStart="0dp"-->
+    <!--android:paddingEnd="30dp"-->
+    <!--android:textColor="@color/colorTextBlack87"/>-->
+
+    <!--<androidx.appcompat.widget.AppCompatImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="130dp"-->
+    <!--android:src="@drawable/ic_logo_washi" />-->
+    <!--</androidx.appcompat.widget.LinearLayoutCompat>-->
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/rectangleRounded"
         android:layout_width="match_parent"
         android:layout_height="312dp"
         android:layout_gravity="center|bottom"
+        android:paddingTop="130dp"
         android:background="@drawable/rectangle_rounded"
-        android:gravity="center"
-        android:orientation="vertical" />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="30dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -43,6 +48,10 @@
             android:text="@string/txt_label_new"
             app:layout_anchor="@id/buttonStart"
             app:layout_anchorGravity="top|center" />
+
+        <!--style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"-->
+        <!--android:background="?selectableItemBackground"-->
+        <!--android:theme="@style/AppTheme.ShadowRipple"-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonStart"

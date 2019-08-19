@@ -11,4 +11,6 @@
     <string name="txt_washi">Washi</string>
     <string name="txt_label_email">Digite seu e-mail</string>
     <string name="txt_email_tint">ex: @gmail.com</string>
+    <string name="txt_label_password">Senha</string>
+    <string name="txt_label_login">Entrar</string>
 </resources>
