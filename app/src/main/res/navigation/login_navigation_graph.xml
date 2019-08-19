@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation_graph.xml"
+    app:startDestination="@id/loginActivity">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="br.com.washi.LoginActivity"
+        android:label="Intro ao Washi"
+        tools:layout="@layout/activity_login" />
+
+    <fragment
+        android:id="@+id/bottom_sheet_login"
+        android:name="br.com.washi.BottomSheetLoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_bottom_sheet_login">
+        <action
+            android:id="@+id/action_bottom_sheet_to_password_bottom_sheet"
+            app:destination="@+id/bottom_sheet_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_sheet_password"
+        android:name="br.com.washi.BottomSheetPasswordFragment"
+        android:label="Senha"
+        tools:layout="@layout/fragment_bottom_sheet_password">
+        <action
+            android:id="@+id/action_bottom_sheet_to_home"
+            app:destination="@+id/bottom_sheet_password" />
+    </fragment>
+
+</navigation>
