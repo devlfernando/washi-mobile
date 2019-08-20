@@ -6,17 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
-    
+
     <fragment
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/login_navigation_graph" />
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_login" />
+        app:navGraph="@navigation/login_navigation_graph"
+        tools:layout="@layout/content_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

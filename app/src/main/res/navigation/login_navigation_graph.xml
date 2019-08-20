@@ -3,32 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_navigation_graph.xml"
-    app:startDestination="@id/loginActivity">
-
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="br.com.washi.LoginActivity"
-        android:label="Intro ao Washi"
-        tools:layout="@layout/activity_login" />
+    app:startDestination="@id/login_screen">
 
     <fragment
+        android:id="@+id/login_screen"
+        android:name="br.com.washi.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/content_login">
+        <action
+            android:id="@+id/action_login_screen_to_bottom_sheet_login"
+            app:destination="@id/bottom_sheet_login" />
+    </fragment>
+
+    <dialog
         android:id="@+id/bottom_sheet_login"
         android:name="br.com.washi.BottomSheetLoginFragment"
-        android:label="Login"
+        android:label="BottomSheetLoginFragment"
         tools:layout="@layout/fragment_bottom_sheet_login">
         <action
             android:id="@+id/action_bottom_sheet_to_password_bottom_sheet"
             app:destination="@+id/bottom_sheet_password" />
-    </fragment>
+    </dialog>
 
-    <fragment
+    <dialog
         android:id="@+id/bottom_sheet_password"
         android:name="br.com.washi.BottomSheetPasswordFragment"
-        android:label="Senha"
-        tools:layout="@layout/fragment_bottom_sheet_password">
-        <action
-            android:id="@+id/action_bottom_sheet_to_home"
-            app:destination="@+id/bottom_sheet_password" />
-    </fragment>
+        android:label="BottomSheetPasswordFragment"
+        tools:layout="@layout/fragment_bottom_sheet_password" />
 
 </navigation>

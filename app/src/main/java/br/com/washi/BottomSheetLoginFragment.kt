@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.full_content_login_bottomsheet.*
 import org.jetbrains.anko.support.v4.toast
@@ -30,6 +31,8 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
 
         fab.setOnClickListener { fabButton ->
             toast("Olá, ${etPasswordInput.text}")
+            findNavController().navigate(BottomSheetLoginFragmentDirections
+                    .actionBottomSheetToPasswordBottomSheet())
         }
     }
 }
