@@ -1,11 +1,13 @@
-package br.com.washi
+package br.com.washi.login.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import br.com.washi.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.full_content_login_bottomsheet.*
 import org.jetbrains.anko.support.v4.toast
 
@@ -21,7 +23,11 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
         return R.style.Theme_MaterialComponents_Light_BottomSheetDialog
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_bottom_sheet_login, container, false)
     }
 
@@ -29,10 +35,11 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         etPasswordInput.requestFocus()
 
-        fab.setOnClickListener { fabButton ->
+        fab.setOnClickListener {
             toast("Olá, ${etPasswordInput.text}")
-            findNavController().navigate(BottomSheetLoginFragmentDirections
-                    .actionBottomSheetToPasswordBottomSheet())
+            nav_login_fragment.findNavController().navigate(
+                BottomSheetLoginFragmentDirections.actionBottomSheetToPasswordBottomSheet()
+            )
         }
     }
 }

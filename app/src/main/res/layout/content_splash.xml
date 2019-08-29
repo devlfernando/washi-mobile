@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".SplashActivity"
+    tools:context=".splash.view.SplashActivity"
     tools:showIn="@layout/activity_splash">
 
     <TextView

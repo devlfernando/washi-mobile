@@ -28,7 +28,24 @@
     </style>
 
     <style name="Text" parent="Title">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="TitleLargeWashi" parent="Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:fontFamily">@font/washi_bold</item>
+    </style>
+
+    <style name="TitleLightLargeWashi" parent="TitleLargeWashi">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/colorTextWhite87</item>
+    </style>
+
+    <style name="TitleDarkLargeWashi" parent="TitleLargeWashi">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorDark</item>
     </style>
 
     <style name="CustomEditText" parent="Widget.AppCompat.EditText">
@@ -42,6 +59,15 @@
         <item name="colorButtonNormal">@android:color/white</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:background">@drawable/custom_button_bg</item>
+    </style>
+
+    <style name="TextWithIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorTextWhite87</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="AppTheme.ShadowRipple">

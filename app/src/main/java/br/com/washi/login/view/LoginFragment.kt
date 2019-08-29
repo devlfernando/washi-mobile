@@ -1,4 +1,4 @@
-package br.com.washi
+package br.com.washi.login.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import br.com.washi.R
 import kotlinx.android.synthetic.main.content_login.*
 
 
@@ -14,7 +15,11 @@ import kotlinx.android.synthetic.main.content_login.*
  */
 
 class LoginFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.content_login, container, false)
     }
 
@@ -22,7 +27,6 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         buttonStart.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginScreenToBottomSheetLogin())
-
         }
     }
 

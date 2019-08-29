@@ -1,4 +1,4 @@
-package br.com.washi
+package br.com.washi.util
 
 
 /**

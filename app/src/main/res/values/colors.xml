@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#000859</color>
     <color name="colorAccent">#3060f2</color>
     <color name="colorAccentTransp">#1F3060f2</color>
+    <color name="colorDark">#2d2c2d</color>
 
     <!-- Text colors -->
     <color name="colorTextBlack87">#DE000000</color>
