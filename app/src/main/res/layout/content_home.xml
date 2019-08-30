@@ -1,76 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <!--    <androidx.appcompat.widget.LinearLayoutCompat-->
-    <!--        android:id="@+id/rectangleRounded"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="312dp"-->
-    <!--        android:layout_gravity="center|bottom"-->
-    <!--        android:paddingTop="130dp"-->
-    <!--        android:background="@drawable/rectangle_rounded"-->
-    <!--        android:gravity="center"-->
-    <!--        android:orientation="vertical" />-->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="55dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/rectangleRounded"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/rectangle_rounded_inverse"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLabelHello"
+                    style="@style/TitleLightLargeWashi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Olá,"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Olá," />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_name_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvLabelHello"
+                    app:layout_constraintTop_toBottomOf="@id/tvLabelHello"
+                    app:shimmer_duration="1200">
+
+                    <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                        style="@style/TitleLightLargeWashi"-->
+                    <!--                        android:text="Luis Fernando"-->
+                    <!--                        tools:text="Luis Fernando" />-->
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="@dimen/placeholder_height"
+                        android:background="@color/placeholder_bg" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_ninja"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_circle_color="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvLabelHello"
-            style="@style/TitleDarkLargeWashi"
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Olá," />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/TitleDarkLargeWashi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@+id/tvLabelHello"
-            app:layout_constraintTop_toBottomOf="@id/tvLabelHello"
-            tools:text="Luis Fernando" />
-
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_ninja"
-            app:civ_circle_color="@color/colorAccentTransp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="Escolha um serviço, a qual você tem interesse hoje."
+            tools:text="Escolha um serviço, a qual você tem interesse hoje." />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/white"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/card_wash_service" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        style="@style/Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        tools:text="Escolha um serviço, a qual você tem interesse hoje." />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/white"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:itemCount="4"
-        tools:listitem="@layout/card_wash_service" />
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -39,12 +39,12 @@
     </style>
 
     <style name="TitleLightLargeWashi" parent="TitleLargeWashi">
-        <item name="android:textSize">25sp</item>
-        <item name="android:textColor">@color/colorTextWhite87</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="TitleDarkLargeWashi" parent="TitleLargeWashi">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">32sp</item>
         <item name="android:textColor">@color/colorDark</item>
     </style>
 
