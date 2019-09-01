@@ -59,6 +59,7 @@
         <item name="colorButtonNormal">@android:color/white</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:background">@drawable/custom_button_bg</item>
+        <item name="android:foreground">@drawable/ripple_drawable</item>
     </style>
 
     <style name="TextWithIcon">
