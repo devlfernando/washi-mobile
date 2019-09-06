@@ -58,10 +58,10 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:src="@drawable/ic_ninja"
                 app:civ_border_color="@android:color/white"
                 app:civ_circle_color="@android:color/white"
-                android:foreground="?android:attr/selectableItemBackground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -70,32 +70,38 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
         style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:text="@string/intro_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangleRounded"
-        tools:text="Escolha um serviço, a qual você tem interesse hoje." />
+        tools:text="Escolha um dos nossos serviços que você tem interesse hoje" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvList"
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_marginTop="60dp"
+        android:fitsSystemWindows="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@id/appCompatTextView"
-        app:layout_constraintRight_toRightOf="@id/appCompatTextView"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
-        app:spanCount="2"
-        tools:itemCount="4"
-        tools:listitem="@layout/card_wash_service" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appCompatTextView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/card_wash_service" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

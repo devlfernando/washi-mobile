@@ -41,11 +41,13 @@
     <style name="TitleLightLargeWashi" parent="TitleLargeWashi">
         <item name="android:textSize">32sp</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/washi_bold</item>
     </style>
 
     <style name="TitleDarkLargeWashi" parent="TitleLargeWashi">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">26sp</item>
         <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/washi_bold</item>
     </style>
 
     <style name="CustomEditText" parent="Widget.AppCompat.EditText">
