@@ -2,11 +2,17 @@ package br.com.washi
 
 import android.app.Application
 
+class WashiApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        appInstance = this
+    }
 
-/**
-
- * Criado por Luis Fernando F. Araujo em 2019-08-19
-
- **/
-
-class WashiApplication : Application()
+    companion object {
+        var appInstance: WashiApplication? = null
+        fun getInstance(): WashiApplication {
+            checkNotNull(appInstance) { "Configure a classse de Application no Manifest" }
+            return appInstance!!
+        }
+    }
+}

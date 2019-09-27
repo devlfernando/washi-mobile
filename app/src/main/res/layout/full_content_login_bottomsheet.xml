@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvPassword"
+        android:id="@+id/tv_label_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,10 +22,10 @@
         tools:text="Digite seu e-mail" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etPasswordInput"
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/tvPassword"
+        android:layout_below="@id/tv_label_title"
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"

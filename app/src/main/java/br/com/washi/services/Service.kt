@@ -1,3 +1,7 @@
 package br.com.washi.services
 
-data class Service(val name: String, val image: Int)
+
+data class Service(
+    val service: String, val personName: String, val quantityItens: Int,
+    val totalAmount: String
+)

@@ -33,10 +33,10 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        etPasswordInput.requestFocus()
+        et_email.requestFocus()
 
         fab.setOnClickListener {
-            toast("Olá, ${etPasswordInput.text}")
+            toast("Olá, ${et_email.text}")
             nav_login_fragment.findNavController().navigate(
                 BottomSheetLoginFragmentDirections.actionBottomSheetToPasswordBottomSheet()
             )

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import br.com.washi.BaseFragment
 import br.com.washi.R
 import kotlinx.android.synthetic.main.content_login.*
 
@@ -14,7 +14,8 @@ import kotlinx.android.synthetic.main.content_login.*
  * Criado por Luis Fernando F. Araujo em 2019-08-19
  */
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,6 +29,6 @@ class LoginFragment : Fragment() {
         buttonStart.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginScreenToBottomSheetLogin())
         }
-    }
 
+    }
 }

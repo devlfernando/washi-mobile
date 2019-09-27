@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        style="@style/CustomBackButtonWhite"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@id/iv_back"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/label_wash_detail"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="28sp"
+        tools:text="Detalhes da lavagem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/label_clothes_type"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="20sp"
+        tools:text="Coloque a quantidade de roupas" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_quantity_clothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label_quantity"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_quantity"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorTextWhite87"
+        android:textColorHint="@color/colorTextWhite54"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_laundry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_quantity_clothes"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/label_clothes_type"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="20sp"
+        tools:text="Escolha o tipo de lavagem" />
+
+    <include layout="@layout/item_laundry_type" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_products"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/label_which_product"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="20sp"
+        tools:text="Qual produto iremos usar?" />
+
+    <include layout="@layout/item_product_type" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/basket_clothes"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/label_aproximated_amount"
+            android:textColor="@color/colorTextWhite87"
+            android:textSize="20sp"
+            tools:text="Valor aproximado" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cash_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_label_cash"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/label_amount_value"
+            android:textColor="@color/colorTextWhite87"
+            android:textSize="20sp"
+            tools:text="R$ 0,00" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include layout="@layout/custom_notification_layout" />
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/circular_buttom_wash"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/button_solicitation_value"
+        android:textColor="@color/colorAccent"
+        app:backgroundTint="@android:color/white"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp"
+        tools:text="Adicionar na cesta" />
+
+</RelativeLayout>

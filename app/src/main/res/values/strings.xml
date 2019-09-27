@@ -17,8 +17,28 @@
     <string name="label_delivery">Entregar</string>
     <string name="label_activities">Atividades</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_hello">Olá,</string>
     <string name="intro_message">Escolha um dos nossos serviços que você tem interesse hoje</string>
+    <string name="title_laundry">Lavanderia</string>
+    <string name="sub_title_laundry">Acrescente a quantidade de roupas</string>
+    <string name="label_clothes">Roupas</string>
+    <string name="label_wash_detail">Detalhes da lavagem</string>
+    <string name="label_clothes_type">Escolha o tipo de lavagem</string>
+    <string name="label_which_product">Qual produto iremos usar?</string>
+    <string name="label_aproximated_amount">Valor aproximado</string>
+    <string name="label_amount_value">R$ 0,00</string>
+    <string name="button_solicitation_value">Adicionar na cesta</string>
+    <string name="label_bubbles_powder">Sabão em pó</string>
+    <string name="label_bubbles_liquid">Sabão liquido</string>
+    <string name="label_softener">Amaciante</string>
+    <string name="value_basket">0</string>
+    <string name="label_wash_machine">Lavagem na máquina</string>
+    <string name="label_dry_wash">Lavagem à seco</string>
+    <string name="label_switch_button_enable"><b>Ative</b> para ganhar uma grana</string>
+    <string name="label_switch_button_disabled"><b>Desative</b> para lavar sua roupa</string>
+    <string name="label_quantity">50 peças</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

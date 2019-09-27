@@ -82,6 +82,23 @@
         <item name="android:bottomLeftRadius">6dp</item>
     </style>
 
+    <style name="CustomBackButton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:src">@drawable/ic_back</item>
+    </style>
+
+    <style name="CustomBackButtonWhite" parent="CustomBackButton">
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="WashiSwitch">
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

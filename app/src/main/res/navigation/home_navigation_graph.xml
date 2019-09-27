@@ -10,15 +10,42 @@
         android:name="br.com.washi.home.view.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/content_home">
+
         <action
             android:id="@+id/action_home_screen_to_laundry"
-            app:destination="@id/washScreen" />
-    </fragment>
+            app:destination="@id/washFragment" />
 
+        <action
+            android:id="@+id/action_home_screen_to_profile"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/washScreen"
+        android:id="@+id/washFragment"
         android:name="br.com.washi.wash.view.WashFragment"
         android:label="WashFragment"
-        tools:layout="@layout/fragment_wash" />
+        tools:layout="@layout/fragment_wash">
+        <action
+            android:id="@+id/action_washFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="br.com.washi.profile.view.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="br.com.washi.cart.view.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="br.com.washi.maps.MapsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps" />
 
 </navigation>
