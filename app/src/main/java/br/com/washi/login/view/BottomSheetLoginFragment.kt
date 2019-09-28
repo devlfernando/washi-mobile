@@ -38,7 +38,9 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
         fab.setOnClickListener {
             toast("Olá, ${et_email.text}")
             nav_login_fragment.findNavController().navigate(
-                BottomSheetLoginFragmentDirections.actionBottomSheetToPasswordBottomSheet()
+                BottomSheetLoginFragmentDirections.actionBottomSheetToPasswordBottomSheet(
+                    et_email.text.toString()
+                )
             )
         }
     }

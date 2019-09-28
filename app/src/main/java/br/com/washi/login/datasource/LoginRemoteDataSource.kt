@@ -20,4 +20,11 @@ class LoginRemoteDataSource constructor(private val loginService: LoginService) 
             return Result.Success(person.body())
         return Result.Error(IOException("Erro ao se comunicar com nosso serviço de autenticação"))
     }
+
+    suspend fun obtainPerson(id: String): Result<User> {
+        val person = loginService.obtainPersonInfos(id)
+        if (person.isSuccessful)
+            return Result.Success(person.body())
+        return Result.Error(IOException("Erro ao seu comunicar com nossos serviços"))
+    }
 }

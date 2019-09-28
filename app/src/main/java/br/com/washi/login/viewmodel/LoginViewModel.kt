@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.washi.login.repository.AuthRepository
 import br.com.washi.login.request.UserRequest
+import br.com.washi.persistence.preferences.Preferences
 import kotlinx.coroutines.launch
 
 class LoginViewModel constructor(private var authRepository: AuthRepository) : ViewModel() {
@@ -14,10 +15,21 @@ class LoginViewModel constructor(private var authRepository: AuthRepository) : V
 
     fun isValidUser(userRequest: UserRequest) {
         viewModelScope.launch {
-            when (authRepository.hasExistPerson(userRequest)) {
-                true -> _isAuthenticated.value = true
-                false -> _isAuthenticated.value = false
+            val userAuth = authRepository.hasExistPerson(userRequest)
+            if (userAuth != null) {
+                saveLocalInfos(userAuth.code.toString())
+                _isAuthenticated.value = true
+            } else {
+                _isAuthenticated.value = false
             }
+        }
+    }
+
+    private fun saveLocalInfos(id: String) {
+        viewModelScope.launch {
+            val user = authRepository.getPersonInfos(id)
+            if (user != null)
+                Preferences.savePerson("person", user)
         }
     }
 }

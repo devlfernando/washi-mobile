@@ -40,7 +40,12 @@ class BottomSheetPasswordFragment : BottomSheetDialogFragment() {
 
         circularButton.setOnClickListener {
             circularButton.startAnimation()
-            vm.isValidUser(UserRequest("ferrugem@mailinator.com", "123@123"))
+            vm.isValidUser(
+                UserRequest(
+                    arguments?.getString("email").toString(),
+                    et_password.text.toString()
+                )
+            )
         }
     }
 
@@ -59,7 +64,7 @@ class BottomSheetPasswordFragment : BottomSheetDialogFragment() {
                 }
                 else -> {
                     toast("Não foi possivel se conectar")
-                    circularButton.stopAnimation()
+                    circularButton.revertAnimation()
                 }
             }
         }
