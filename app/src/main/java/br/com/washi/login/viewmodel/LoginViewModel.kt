@@ -1,7 +1,7 @@
 package br.com.washi.login.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.washi.login.repository.AuthRepository
@@ -9,8 +9,8 @@ import br.com.washi.login.request.UserRequest
 import br.com.washi.persistence.preferences.Preferences
 import kotlinx.coroutines.launch
 
-class LoginViewModel constructor(private var authRepository: AuthRepository) : ViewModel() {
-    private val _isAuthenticated = MediatorLiveData<Boolean>()
+class LoginViewModel constructor(private val authRepository: AuthRepository) : ViewModel() {
+    private val _isAuthenticated = MutableLiveData<Boolean>()
     val isAuthenticated: LiveData<Boolean> get() = _isAuthenticated
 
     fun isValidUser(userRequest: UserRequest) {
@@ -25,11 +25,9 @@ class LoginViewModel constructor(private var authRepository: AuthRepository) : V
         }
     }
 
-    private fun saveLocalInfos(id: String) {
-        viewModelScope.launch {
-            val user = authRepository.getPersonInfos(id)
-            if (user != null)
-                Preferences.savePerson("person", user)
-        }
+    private suspend fun saveLocalInfos(id: String) {
+        val user = authRepository.getPersonInfos(id)
+        if (user != null)
+            Preferences.saveUser("person", user)
     }
 }

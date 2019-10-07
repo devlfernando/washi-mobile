@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import br.com.washi.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -13,6 +14,12 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.fragment_maps.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import org.jetbrains.anko.support.v4.toast
 
 
 class MapsFragment : Fragment(), OnMapReadyCallback {
@@ -24,6 +31,18 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         val spMapsFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         spMapsFragment?.getMapAsync(this)
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        fab_next_payment.setOnClickListener {
+            toast("Pagamento realizado, aguarde um momento...")
+            CoroutineScope(Dispatchers.Main).launch {
+                delay(4000)
+                findNavController().navigate(MapsFragmentDirections.actionMapsFragmentToOrderFragment())
+            }
+        }
     }
 
 
@@ -42,5 +61,10 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         val sp = LatLng(-23.5505, -46.6333)
         googleMap?.addMarker(MarkerOptions().position(sp).title("Marcador em SP"))
         googleMap?.moveCamera(CameraUpdateFactory.newLatLng(sp))
+    }
+
+    private fun triggerPayment() {
+        toast("Pagamento realizado, aguarde...")
+
     }
 }

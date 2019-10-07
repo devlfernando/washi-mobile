@@ -1,6 +1,6 @@
 package br.com.washi.login.ktx
 
-import br.com.washi.login.Result
+import br.com.washi.util.Result
 import java.io.IOException
 
 suspend fun <T : Any> safeApiCall(call: suspend () -> Result<T>, errorMessage: String): Result<T> =

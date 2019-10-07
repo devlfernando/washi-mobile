@@ -40,37 +40,67 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="Olá," />
 
-                <com.facebook.shimmer.ShimmerFrameLayout
-                    android:id="@+id/shimmer_name_container"
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="@+id/tvLabelHello"
-                    app:layout_constraintTop_toBottomOf="@id/tvLabelHello"
-                    app:shimmer_duration="1200">
+                    app:layout_constraintTop_toBottomOf="@id/tvLabelHello">
 
-                    <!--                    <androidx.appcompat.widget.AppCompatTextView-->
-                    <!--                        style="@style/TitleLightLargeWashi"-->
-                    <!--                        android:text="Luis Fernando"-->
-                    <!--                        tools:text="Luis Fernando" />-->
-                    <View
-                        android:layout_width="300dp"
-                        android:layout_height="@dimen/placeholder_height"
-                        android:background="@color/placeholder_bg" />
-                </com.facebook.shimmer.ShimmerFrameLayout>
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_name_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shimmer_duration="1200">
 
-                <com.mikhaellopez.circularimageview.CircularImageView
-                    android:id="@+id/iv_profile"
+                        <View
+                            android:id="@+id/sf_view"
+                            android:layout_width="300dp"
+                            android:layout_height="@dimen/placeholder_height"
+                            android:background="@color/placeholder_bg" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_person_name"
+                        style="@style/TitleLightLargeWashi"
+                        android:text="Luis Fernando"
+                        android:visibility="invisible"
+                        tools:text="Luis Fernando" />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_marginEnd="20dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/woman"
-                    app:civ_border_color="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_profile_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shimmer_duration="1200">
+
+                        <View
+                            android:id="@+id/sf_profile_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/placeholder_bg" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/woman"
+                        android:visibility="invisible"
+                        app:civ_border_color="@android:color/transparent" />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

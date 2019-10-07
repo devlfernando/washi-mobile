@@ -31,6 +31,14 @@
         <item name="android:textSize">17sp</item>
     </style>
 
+    <style name="NormalTextWashiLight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorTextWhite87</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
     <style name="TitleLargeWashi" parent="Title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -64,6 +72,14 @@
         <item name="android:foreground">@drawable/ripple_drawable</item>
     </style>
 
+    <style name="CircleCustomButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:background">@drawable/custom_button_bg</item>
+        <item name="android:foreground">@drawable/ripple_drawable</item>
+    </style>
+
     <style name="TextWithIcon">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -93,6 +109,16 @@
 
     <style name="CustomBackButtonWhite" parent="CustomBackButton">
         <item name="android:tint">@android:color/white</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CustomBasketClothes">
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
     </style>
 
     <style name="WashiSwitch">

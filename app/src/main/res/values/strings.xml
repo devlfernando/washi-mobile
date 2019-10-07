@@ -36,9 +36,29 @@
     <string name="label_dry_wash">Lavagem à seco</string>
     <string name="label_switch_button_enable"><b>Ative</b> para ganhar uma grana</string>
     <string name="label_switch_button_disabled"><b>Desative</b> para lavar sua roupa</string>
-    <string name="label_quantity">50 peças</string>
+    <string name="label_quantity">ex: 20 peças</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="label_address">Coloque seu endereço</string>
+    <string name="label_address_hint">ex. Rua Alves de Souza</string>
+    <string name="text_button_washi">Quero usar o Washi</string>
+    <string name="label_fav_email">Agora, seu e-mail preferido</string>
+    <string name="label_person_telephone">Um telefone da sua escolha</string>
+    <string name="mask_hint_telephone">(xx) XXXXX-XXXX</string>
+    <string name="label_address_number">Agora, o número</string>
+    <string name="label_hint_address_number">Só não pode ser igual a 0</string>
+    <string name="label_title_address_neighborhood">Qual bairro vive hoje?</string>
+    <string name="label_hint_neogborhood">Seu bairro aqui</string>
+    <string name="label_person_city">Em que cidade mora?</string>
+    <string name="label_hint_tv_label_title_person_city">Coloca aqui para a gente</string>
+    <string name="label_person_state">Coloque aqui e terminamos. Ufa!</string>
+    <string name="label_title_person_state">Por fim, seu estado</string>
+    <string name="label_title_person_name">Como podemos te chamar?</string>
+    <string name="label_hint_person_name">Nome e sobrenome</string>
+    <string name="label_person_document">Qual é o seu documento?</string>
+    <string name="label_hint_person_document">(Pode ser o CPF ou o CNPJ)</string>
+    <string name="label_person_password">Escolha uma senha</string>
+    <string name="label_hint_person_password">Mas, tem que ser aquela senha!</string>
+    <string name="label_person_zone">Informe seu CEP</string>
+    <string name="label_hint_zone">XXXXX-XXX</string>
 </resources>

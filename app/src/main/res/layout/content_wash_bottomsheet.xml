@@ -14,12 +14,18 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="41dp" />
 
+    <!--
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    -->
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_label_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="37dp"
         android:layout_toEndOf="@id/iv_back"
         android:fontFamily="@font/roboto_light"
         android:text="@string/label_wash_detail"
@@ -50,11 +56,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:background="@null"
+        android:focusable="true"
         android:fontFamily="@font/roboto_light"
         android:hint="@string/label_quantity"
         android:inputType="numberDecimal"
         android:textColor="@color/colorTextWhite87"
         android:textColorHint="@color/colorTextWhite54"
+        android:textCursorDrawable="@drawable/editext_cursor"
         android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -123,16 +131,14 @@
 
     <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/circular_buttom_wash"
+        style="@style/CircleCustomButton"
         android:layout_width="260dp"
         android:layout_height="55dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="50dp"
-        android:gravity="center"
         android:text="@string/button_solicitation_value"
-        android:textColor="@color/colorAccent"
-        app:backgroundTint="@android:color/white"
         app:spinning_bar_color="#FFF"
         app:spinning_bar_padding="6dp"
         app:spinning_bar_width="4dp"

@@ -26,9 +26,13 @@ class LoginFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        buttonStart.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginScreenToBottomSheetLogin())
+
+        button_signup.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginScreenToSignupPersonNavigationGraph())
         }
 
+        button_start.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginScreenToBottomSheetLogin())
+        }
     }
 }

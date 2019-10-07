@@ -17,14 +17,15 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_signup"
             style="@style/CustomButton"
             android:layout_marginBottom="10dp"
             android:text="@string/txt_label_new"
-            app:layout_anchor="@id/buttonStart"
+            app:layout_anchor="@id/button_start"
             app:layout_anchorGravity="top|center" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonStart"
+            android:id="@+id/button_start"
             style="@style/CustomButton"
             android:layout_gravity="bottom|center"
             android:background="@drawable/custom_button_no_bg"

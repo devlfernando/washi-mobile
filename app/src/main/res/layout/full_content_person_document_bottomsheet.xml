@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="525dp"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_label_person_document"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/label_person_document"
+        android:textColor="@color/colorTextWhite87"
+        android:textSize="28sp"
+        tools:text="Qual é seu documento?" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_person_document"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_label_person_document"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_hint_person_document"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorTextWhite87"
+        android:textColorHint="@color/colorTextWhite54"
+        android:textCursorDrawable="@drawable/editext_cursor"
+        android:textSize="24sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_next_person_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="@color/colorAccent"
+        app:srcCompat="@drawable/ic_arrow_forward" />
+</RelativeLayout>

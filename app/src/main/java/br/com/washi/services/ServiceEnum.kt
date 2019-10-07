@@ -4,6 +4,6 @@ enum class ServiceEnum(val value: String) {
     WASH("LAVAR"),
     DRY("PASSAR"),
     DELIVERY("ENTREGAR"),
-    SOLICITATION("SOLICITAÇÕES"),
+    ORDERS("PEDIDOS"),
     OTHERS("OUTROS")
 }

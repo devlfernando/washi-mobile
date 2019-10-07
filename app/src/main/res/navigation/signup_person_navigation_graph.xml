@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_person_navigation_graph"
+    app:startDestination="@id/personNameBottomSheet">
+
+    <dialog
+        android:id="@+id/personNameBottomSheet"
+        android:name="br.com.washi.signup.view.PersonNameBottomSheet"
+        android:label="PersonNameBottomSheet"
+        tools:layout="@layout/fragment_person_name_bottom_sheet">
+        <action
+            android:id="@+id/action_personNameBottomSheet_to_personEmailBottomSheet"
+            app:destination="@id/personEmailBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personEmailBottomSheet"
+        android:name="br.com.washi.signup.view.PersonEmailBottomSheet"
+        android:label="PersonEmailBottomSheet"
+        tools:layout="@layout/fragment_person_email_bottom_sheet">
+        <action
+            android:id="@+id/action_personEmailBottomSheet_to_personDocumentBottomSheet"
+            app:destination="@id/personDocumentBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personPasswordBottomSheet"
+        android:name="br.com.washi.signup.view.PersonPasswordBottomSheet"
+        android:label="PersonPasswordBottomSheet"
+        tools:layout="@layout/fragment_person_password_bottom_sheet">
+        <action
+            android:id="@+id/action_personPasswordBottomSheet_to_personZoneBottomSheet"
+            app:destination="@id/personZoneBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personDocumentBottomSheet"
+        android:name="br.com.washi.signup.view.PersonDocumentBottomSheet"
+        android:label="PersonDocumentBottomSheet"
+        tools:layout="@layout/fragment_person_document_bottom_sheet">
+        <action
+            android:id="@+id/action_personDocumentBottomSheet_to_personTelephoneBottomSheet"
+            app:destination="@id/personTelephoneBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personTelephoneBottomSheet"
+        android:name="br.com.washi.signup.view.PersonTelephoneBottomSheet"
+        android:label="PersonTelephoneBottomSheet"
+        tools:layout="@layout/fragment_person_telephone_bottom_sheet">
+        <action
+            android:id="@+id/action_personTelephoneBottomSheet_to_personPasswordBottomSheet"
+            app:destination="@id/personPasswordBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personZoneBottomSheet"
+        android:name="br.com.washi.signup.view.PersonZoneBottomSheet"
+        android:label="PersonZoneBottomSheet"
+        tools:layout="@layout/fragment_person_zone_bottom_sheet">
+        <action
+            android:id="@+id/action_personZoneBottomSheet_to_personAddressBottomSheet"
+            app:destination="@id/personAddressBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personAddressBottomSheet"
+        android:name="br.com.washi.signup.view.PersonAddressBottomSheet"
+        android:label="PersonAddressBottomSheet"
+        tools:layout="@layout/fragment_person_address_bottom_sheet">
+        <action
+            android:id="@+id/action_personAddressBottomSheet_to_personAddressNumberBottomSheet"
+            app:destination="@id/personAddressNumberBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personAddressNumberBottomSheet"
+        android:name="br.com.washi.signup.view.PersonAddressNumberBottomSheet"
+        android:label="PersonAddressNumberBottomSheet"
+        tools:layout="@layout/fragment_person_address_number_bottom_sheet">
+        <action
+            android:id="@+id/action_personAddressNumberBottomSheet_to_personNeighborhoodBottomSheet"
+            app:destination="@id/personNeighborhoodBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personNeighborhoodBottomSheet"
+        android:name="br.com.washi.signup.view.PersonNeighborhoodBottomSheet"
+        android:label="PersonNeighborhoodBottomSheet"
+        tools:layout="@layout/fragment_person_neighborhood_bottom_sheet">
+        <action
+            android:id="@+id/action_personNeighborhoodBottomSheet_to_personCityBottomSheet"
+            app:destination="@id/personCityBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personCityBottomSheet"
+        android:name="br.com.washi.signup.view.PersonCityBottomSheet"
+        android:label="PersonCityBottomSheet"
+        tools:layout="@layout/fragment_person_city_bottom_sheet">
+        <action
+            android:id="@+id/action_personCityBottomSheet_to_personStateBottomSheet"
+            app:destination="@id/personStateBottomSheet">
+            <argument
+                android:name="person"
+                app:argType="br.com.washi.signup.data.PersonRequest" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/personStateBottomSheet"
+        android:name="br.com.washi.signup.view.PersonStateBottomSheet"
+        android:label="PersonStateBottomSheet"
+        tools:layout="@layout/fragment_person_state_bottom_sheet">
+        <action
+            android:id="@+id/action_personStateBottomSheet_to_solicitation_navigation_graph"
+            app:destination="@id/solicitation_navigation_graph" />
+    </dialog>
+    <include app:graph="@navigation/home_navigation_graph" />
+</navigation>

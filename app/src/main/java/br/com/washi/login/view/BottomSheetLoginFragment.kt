@@ -19,10 +19,6 @@ import org.jetbrains.anko.support.v4.toast
 
 class BottomSheetLoginFragment : BottomSheetDialogFragment() {
 
-    override fun getTheme(): Int {
-        return R.style.Theme_MaterialComponents_Light_BottomSheetDialog
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
