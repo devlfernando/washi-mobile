@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.washi.R
+import br.com.washi.persistence.preferences.Preferences
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -43,6 +44,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                 findNavController().navigate(MapsFragmentDirections.actionMapsFragmentToOrderFragment())
             }
         }
+
+        tv_local_base.append(Preferences.obtainUserLogged("person").name)
     }
 
 

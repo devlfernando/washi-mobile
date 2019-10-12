@@ -24,6 +24,7 @@ class PersonEmailBottomSheet : BaseBottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fab_next_document.isEnabled = true
         val person = arguments?.get("person") as PersonRequest
         fab_next_document.setOnClickListener {
             findNavController()
@@ -36,6 +37,7 @@ class PersonEmailBottomSheet : BaseBottomSheetDialogFragment() {
                                 )
                         )
                 )
+            it.isEnabled = false
         }
     }
 

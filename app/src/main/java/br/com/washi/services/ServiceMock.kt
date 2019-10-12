@@ -4,16 +4,15 @@ object ServiceMock {
     val list = arrayListOf<Service>()
 
     private val servicesName = listOf(
-        "Lavar",
-        "Passar"
+        "Lavar"
     )
 
     private val personsName = listOf(
-        "Thiago Yamamoto",
-        "Douglas Cabral",
-        "Alcides",
-        "Pedro",
-        "Fernando"
+        "Leonardo Luan",
+        "Nathan",
+        "Manuel Barros",
+        "Antônia",
+        "Edson Novaes"
     )
 
     private val itensQuantity = listOf(
@@ -36,11 +35,11 @@ object ServiceMock {
         for (index in 0 until (personsName.size)) {
             list.add(
                 Service(
-                    servicesName[index * 0].plus(" ${servicesName[index * 0 + 1]}"),
                     personsName[index],
+                    servicesName[index * 0],
                     itensQuantity[index],
                     totalAmount[index]
-                )
+                ) //.plus(" ${servicesName[index * 0 + 1]}")
             )
         }
         return list

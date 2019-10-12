@@ -5,22 +5,18 @@ object SolicitationMock {
 
 
     private val serviceType = listOf(
-        "Lavagem na máquina",
-        "Lavagem à seco"
+        "Lavagem na máquina"
     )
 
     private val product = listOf(
-        "Amaciante",
-        "Sabão em pó"
+        "Amaciante"
     )
 
     private val quantityOfPiece = listOf(
-        50,
-        10
+        50
     )
 
     private val amount = listOf(
-        "R$ 160.00",
         "R$ 90.00"
     )
 

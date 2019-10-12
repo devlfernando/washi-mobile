@@ -125,7 +125,7 @@ class HomeFragment : BaseFragment() {
                 person_name.text = it.personName
                 type_service.text = it.service
                 service_price.text = it.totalAmount
-                service_quantity.text = it.quantityItens.toString()
+                service_quantity.text = it.quantityItens.toString().plus(" peças")
             },
             { navigateToAService(service) },
             manager = GridLayoutManager(context, 1, GridLayoutManager.VERTICAL, false)
@@ -135,10 +135,10 @@ class HomeFragment : BaseFragment() {
     private fun navigateToAService(name: String) {
         when (name.toUpperCase(Locale.getDefault())) {
             WASH.value -> findNavController().navigate(HomeFragmentDirections.actionHomeScreenToLaundry())
-            DRY.value -> toast(name)
-            DELIVERY.value -> toast(name)
+            DRY.value -> toast("O serviço de $name está sendo desenvolvido :)")
+            DELIVERY.value -> toast("O serviço de $name está sendo desenvolvido :)")
             ORDERS.value -> findNavController().navigate(HomeFragmentDirections.actionHomeScreenToOrder())
-            else -> toast(name)
+            else -> toast("A $name está indisponível no momento")
         }
     }
 }

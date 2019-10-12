@@ -15,7 +15,8 @@
             app:destination="@id/bottom_sheet_login" />
         <action
             android:id="@+id/action_login_screen_to_signup_person_navigation_graph"
-            app:destination="@id/signup_person_navigation_graph" />
+            app:destination="@id/signup_person_navigation_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <dialog
@@ -39,7 +40,7 @@
         tools:layout="@layout/fragment_bottom_sheet_password">
         <action
             android:id="@+id/action_bottom_sheet_password_to_solicitation_navigation_graph"
-            app:destination="@id/solicitation_navigation_graph" />
+            app:destination="@+id/solicitation_navigation_graph" />
     </dialog>
     <include app:graph="@navigation/home_navigation_graph" />
     <include app:graph="@navigation/signup_person_navigation_graph" />

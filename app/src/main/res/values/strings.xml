@@ -23,7 +23,7 @@
     <string name="sub_title_laundry">Acrescente a quantidade de roupas</string>
     <string name="label_clothes">Roupas</string>
     <string name="label_wash_detail">Detalhes da lavagem</string>
-    <string name="label_clothes_type">Escolha o tipo de lavagem</string>
+    <string name="label_bags_type">Quantas bags será?</string>
     <string name="label_which_product">Qual produto iremos usar?</string>
     <string name="label_aproximated_amount">Valor aproximado</string>
     <string name="label_amount_value">R$ 0,00</string>
@@ -36,7 +36,7 @@
     <string name="label_dry_wash">Lavagem à seco</string>
     <string name="label_switch_button_enable"><b>Ative</b> para ganhar uma grana</string>
     <string name="label_switch_button_disabled"><b>Desative</b> para lavar sua roupa</string>
-    <string name="label_quantity">ex: 20 peças</string>
+    <string name="label_quantity">0</string>
 
     <string name="title_activity_maps">Map</string>
     <string name="label_address">Coloque seu endereço</string>
@@ -61,4 +61,5 @@
     <string name="label_hint_person_password">Mas, tem que ser aquela senha!</string>
     <string name="label_person_zone">Informe seu CEP</string>
     <string name="label_hint_zone">XXXXX-XXX</string>
+    <string name="label_title_type_wash">Escolha o tipo de lavagem</string>
 </resources>

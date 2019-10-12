@@ -11,6 +11,7 @@ import br.com.washi.BaseFragment
 
 import br.com.washi.R
 import br.com.washi.services.SolicitationMock
+import br.com.washi.util.removeReaisFromString
 import br.com.washi.util.setUp
 import kotlinx.android.synthetic.main.card_solicitation.view.*
 import kotlinx.android.synthetic.main.fragment_cart.*
@@ -26,12 +27,16 @@ class CartFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        goToMap()
         configureCartList()
+        goToMap()
         closeCart()
     }
 
     private fun closeCart() {
+        toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+
         cv_close_card.setOnClickListener {
             findNavController().popBackStack()
         }
@@ -40,12 +45,27 @@ class CartFragment : BaseFragment() {
     private fun configureCartList() {
         rv_cart_list.setUp(
             SolicitationMock.getSolicitations(),
-            R.layout.card_solicitation, {
-                tv_initial_value.text = (it.serviceType.substring(0, 2))
-                person_name.text = it.serviceType
-                type_service.text = it.product
-                service_price.text = it.amount
-                service_quantity.text = it.quantityPiece.toString().plus(" peças")
+            R.layout.card_solicitation, { solicitation ->
+                tv_initial_value.text = (solicitation.serviceType.substring(0, 2))
+                person_name.text = solicitation.serviceType
+                type_service.text = solicitation.product
+                service_price.text = solicitation.amount
+                service_quantity.text = solicitation.quantityPiece.toString().plus(" peças")
+
+                tvTotal.text = with(SolicitationMock.getSolicitations()) {
+                    ((removeReaisFromString(first().amount) + removeReaisFromString(last().amount)).toString())
+                }
+
+                cv_plus_one.setOnClickListener {
+                    service_quantity.text = (solicitation.quantityPiece++)
+                        .toString()
+                        .plus(" peças")
+                }
+                cv_subtract_one.setOnClickListener {
+                    service_quantity.text = (solicitation.quantityPiece--)
+                        .toString()
+                        .plus(" peças")
+                }
             },
             {},
             GridLayoutManager(context, 1, GridLayoutManager.VERTICAL, false)

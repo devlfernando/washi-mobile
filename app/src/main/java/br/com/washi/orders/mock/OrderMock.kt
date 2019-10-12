@@ -6,8 +6,7 @@ object OrderMock {
     val list = arrayListOf<Order>()
 
     private val servicesName = listOf(
-        "Lavar",
-        "Passar"
+        "Lavar"
     )
 
     private val status = listOf(
@@ -32,11 +31,11 @@ object OrderMock {
         for (index in 0 until (status.size)) {
             list.add(
                 Order(
-                    service = servicesName[index * 0].plus(" ${servicesName[index * 0 + 1]}"),
                     status = status[index],
+                    service = servicesName[index * 0],
                     quantityItens = itensQuantity[index],
                     totalAmount = totalAmount[index]
-                )
+                ) //.plus(" ${servicesName[index * 0 + 1]}")
             )
         }
         return list

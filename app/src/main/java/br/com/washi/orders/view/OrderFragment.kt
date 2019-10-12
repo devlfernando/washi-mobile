@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.washi.R
 import br.com.washi.orders.mock.OrderMock
@@ -26,6 +27,13 @@ class OrderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configureOrdersByUser()
+        closeOrders()
+    }
+
+    private fun closeOrders() {
+        toolbar_orders.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun configureOrdersByUser() {
@@ -36,7 +44,7 @@ class OrderFragment : Fragment() {
                 tv_status_order.text = it.status
                 type_order.text = it.service
                 order_price.text = it.totalAmount
-                order_quantity.text = it.quantityItens.toString()
+                order_quantity.text = it.quantityItens.toString().plus(" peças")
             },
             {},
             manager = GridLayoutManager(context, 1, GridLayoutManager.VERTICAL, false)

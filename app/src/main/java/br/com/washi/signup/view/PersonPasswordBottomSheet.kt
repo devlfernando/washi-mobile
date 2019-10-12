@@ -24,6 +24,7 @@ class PersonPasswordBottomSheet : BaseBottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fab_next_person_zone.isEnabled = true
         val person = arguments?.get("person") as PersonRequest
         fab_next_person_zone.setOnClickListener {
             findNavController()
@@ -33,6 +34,7 @@ class PersonPasswordBottomSheet : BaseBottomSheetDialogFragment() {
                             person.copy(password = et_person_password.text.toString())
                         )
                 )
+            it.isEnabled = false
         }
     }
 }

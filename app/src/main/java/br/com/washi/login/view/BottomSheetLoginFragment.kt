@@ -29,8 +29,6 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        et_email.requestFocus()
-
         fab.setOnClickListener {
             toast("Olá, ${et_email.text}")
             nav_login_fragment.findNavController().navigate(
@@ -39,5 +37,7 @@ class BottomSheetLoginFragment : BottomSheetDialogFragment() {
                 )
             )
         }
+
+        et_email.requestFocus()
     }
 }

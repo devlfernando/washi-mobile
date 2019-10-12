@@ -34,8 +34,7 @@ class PersonNameBottomSheet : BaseBottomSheetDialogFragment() {
                             )
                         )
                 )
+            it.isEnabled = false
         }
     }
-
-
 }
