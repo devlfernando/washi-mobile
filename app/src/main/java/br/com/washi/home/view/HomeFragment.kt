@@ -136,7 +136,7 @@ class HomeFragment : BaseFragment() {
         when (name.toUpperCase(Locale.getDefault())) {
             WASH.value -> findNavController().navigate(HomeFragmentDirections.actionHomeScreenToLaundry())
             DRY.value -> toast("O serviço de $name está sendo desenvolvido :)")
-            DELIVERY.value -> toast("O serviço de $name está sendo desenvolvido :)")
+            DELIVERY.value -> findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDeliveryFragment())
             ORDERS.value -> findNavController().navigate(HomeFragmentDirections.actionHomeScreenToOrder())
             else -> toast("A $name está indisponível no momento")
         }

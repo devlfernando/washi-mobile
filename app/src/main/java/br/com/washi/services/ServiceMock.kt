@@ -24,10 +24,10 @@ object ServiceMock {
     )
 
     private val totalAmount = listOf(
-        "R$ 200.00",
-        "R$ 150.30",
-        "R$ 85.21",
-        "R$ 50.00",
+        "R$ 15,00",
+        "R$ 40,30",
+        "R$ 12,21",
+        "R$ 10,00",
         "R$ 48.00"
     )
 

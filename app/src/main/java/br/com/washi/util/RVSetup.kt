@@ -9,8 +9,7 @@ fun <Item> RecyclerView.setUp(
     bindHolder: View.(Item) -> Unit,
     itemClick: Item.() -> Unit = {},
     manager: RecyclerView.LayoutManager
-)
-        : Kadapter<Item> {
+): Kadapter<Item> {
     return Kadapter(items, layoutResId, {
         bindHolder(it)
     }, {

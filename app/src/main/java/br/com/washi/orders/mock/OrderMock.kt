@@ -22,9 +22,9 @@ object OrderMock {
     )
 
     private val totalAmount = listOf(
-        "R$ 250.00",
-        "R$ 100.30",
-        "R$ 55.00"
+        "R$ 20,00",
+        "R$ 55,80",
+        "R$ 30,10"
     )
 
     fun getOrders(): List<Order> {

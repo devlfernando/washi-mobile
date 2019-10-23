@@ -35,7 +35,7 @@ class WashFragment : BaseFragment() {
                 .plus(1)
                 .toString()
 
-            tv_cash_value.text = "R$ ${Random.nextInt(10, 1000)}"
+            tv_cash_value.text = "R$ ${Random.nextInt(10, 180)}"
         }
 
         et_quantity_clothes.requestFocus()

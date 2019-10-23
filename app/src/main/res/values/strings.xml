@@ -23,7 +23,7 @@
     <string name="sub_title_laundry">Acrescente a quantidade de roupas</string>
     <string name="label_clothes">Roupas</string>
     <string name="label_wash_detail">Detalhes da lavagem</string>
-    <string name="label_bags_type">Quantas bags será?</string>
+    <string name="label_bags_type">Quantas bags serão?</string>
     <string name="label_which_product">Qual produto iremos usar?</string>
     <string name="label_aproximated_amount">Valor aproximado</string>
     <string name="label_amount_value">R$ 0,00</string>
@@ -62,4 +62,11 @@
     <string name="label_person_zone">Informe seu CEP</string>
     <string name="label_hint_zone">XXXXX-XXX</string>
     <string name="label_title_type_wash">Escolha o tipo de lavagem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_address_delivery">Rua Alves de Souza</string>
+    <string name="label_number_delivery">Número:</string>
+    <string name="label_delivery_zone">CEP:</string>
+    <string name="label_title_bag">bag</string>
 </resources>

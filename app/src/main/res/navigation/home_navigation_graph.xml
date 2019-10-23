@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_home_screen_to_order"
             app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment" />
     </fragment>
     <fragment
         android:id="@+id/washFragment"
@@ -62,5 +65,11 @@
         android:name="br.com.washi.orders.view.OrderFragment"
         android:label="OrderFragment"
         tools:layout="@layout/card_orders_list" />
+
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="br.com.washi.delivery.view.DeliveryFragment"
+        android:label="DeliveryFragment"
+        tools:layout="@layout/card_delivery_list" />
 
 </navigation>
